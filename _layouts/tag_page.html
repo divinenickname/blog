@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+{% assign tag = page.tag %}
+<h1>Posts Tagged "{{ tag }}"</h1>
+
+<ul>
+  {% for post in site.posts %}
+    {% if post.tags contains tag %}
+      <li>
+        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <p>{{ post.date | date: "%B %-d, %Y" }}</p>
+        <!-- Add additional post information as needed -->
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>
