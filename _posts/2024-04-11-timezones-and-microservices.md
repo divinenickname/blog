@@ -8,6 +8,8 @@ When we start developing a new microservice many things may fade into background
 
 One of the those disgusting things in apps is the timezone.
 
+![Img](/assets/images/days_without_timezone_issue.JPG)
+
 We forget about it at the start of developing and then we have to write difficult database migrations or make business-logic more complexity to accommodate unexpected timezone behavior.
 
 This problem is more complex than it seems at first glance. For example if we're living in Berlin with GMT+2 timezone and our microservice is also in Berlin, there are no risks with using LocalDateTime or OffsetDateTime because the server timezone and user timezone are the same.
